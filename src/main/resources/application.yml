@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    # url: jdbc:h2:tcp://localhost/~/qna;NON_KEYWORD=USER
+    url: jdbc:h2:mem:qna;NON_KEYWORDS=USER
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    # open-in-view: false
+
+logging.level:
+  org.hibernate.SQL: debug
