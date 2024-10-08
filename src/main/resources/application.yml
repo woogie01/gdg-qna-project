@@ -1,7 +1,7 @@
 spring:
   datasource:
-    # url: jdbc:h2:tcp://localhost/~/qna;NON_KEYWORD=USER
-    url: jdbc:h2:mem:qna;NON_KEYWORDS=USER
+    # url: jdbc:h2:tcp://localhost/~/qna-project;NON_KEYWORD=USER
+    url: jdbc:h2:mem:qna-project;NON_KEYWORDS=USER
     username: sa
     password:
     driver-class-name: org.h2.Driver
