@@ -1,4 +1,4 @@
-package org.example.qnaproject.exception;
+package org.example.qnaproject.user.exception;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

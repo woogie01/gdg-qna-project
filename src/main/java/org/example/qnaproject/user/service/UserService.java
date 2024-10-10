@@ -1,15 +1,17 @@
-package org.example.qnaproject.service;
+package org.example.qnaproject.user.service;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.qnaproject.domain.User;
-import org.example.qnaproject.dto.LoginRequest;
-import org.example.qnaproject.dto.SignupRequest;
-import org.example.qnaproject.dto.UserInfo;
-import org.example.qnaproject.exception.AlreadyExistsEmailException;
-import org.example.qnaproject.exception.AlreadyExistsUsernameException;
-import org.example.qnaproject.exception.PasswordNotMatchException;
-import org.example.qnaproject.exception.UserNotFound;
-import org.example.qnaproject.repository.UserRepository;
+import org.example.qnaproject.user.domain.User;
+import org.example.qnaproject.user.dto.LoginRequest;
+import org.example.qnaproject.user.dto.SignupRequest;
+import org.example.qnaproject.user.dto.UserInfo;
+import org.example.qnaproject.user.exception.AlreadyExistsEmailException;
+import org.example.qnaproject.user.exception.AlreadyExistsUsernameException;
+import org.example.qnaproject.user.exception.PasswordNotMatchException;
+import org.example.qnaproject.user.exception.UserNotFound;
+import org.example.qnaproject.user.repository.UserRepository;
 import org.example.qnaproject.util.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -67,6 +69,13 @@ public class UserService {
                 .email(user.getEmail())
                 .username(user.getUsername())
                 .build();
+    }
+
+    public void logout(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
+        }
     }
 
     private String getEncryptedPassword(String email, String password) {

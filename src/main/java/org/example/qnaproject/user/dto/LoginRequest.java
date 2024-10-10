@@ -1,4 +1,4 @@
-package org.example.qnaproject.dto;
+package org.example.qnaproject.user.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

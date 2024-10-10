@@ -1,4 +1,4 @@
-package org.example.qnaproject.domain;
+package org.example.qnaproject.user.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

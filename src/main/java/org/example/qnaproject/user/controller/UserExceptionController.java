@@ -1,8 +1,8 @@
-package org.example.qnaproject.controller;
+package org.example.qnaproject.user.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.qnaproject.dto.ErrorResponse;
-import org.example.qnaproject.exception.UserException;
+import org.example.qnaproject.user.dto.ErrorResponse;
+import org.example.qnaproject.user.exception.UserException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

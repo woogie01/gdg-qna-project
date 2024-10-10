@@ -1,6 +1,6 @@
-package org.example.qnaproject.repository;
+package org.example.qnaproject.user.repository;
 
-import org.example.qnaproject.domain.User;
+import org.example.qnaproject.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
