@@ -1,4 +1,4 @@
-package org.example.qnaproject.config.interceptor;
+package org.example.qnaproject.global.config.interceptor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.Cookie;

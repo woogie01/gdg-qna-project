@@ -1,4 +1,4 @@
-package org.example.qnaproject.config.argumentresolver;
+package org.example.qnaproject.global.config.argumentresolver;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

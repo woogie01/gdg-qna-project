@@ -1,4 +1,4 @@
-package org.example.qnaproject.config.argumentresolver;
+package org.example.qnaproject.global.config.argumentresolver;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;

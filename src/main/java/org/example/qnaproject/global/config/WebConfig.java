@@ -1,7 +1,7 @@
-package org.example.qnaproject.config;
+package org.example.qnaproject.global.config;
 
-import org.example.qnaproject.config.argumentresolver.LoginUserArgumentResolver;
-import org.example.qnaproject.config.interceptor.LoginCheckInterceptor;
+import org.example.qnaproject.global.config.argumentresolver.LoginUserArgumentResolver;
+import org.example.qnaproject.global.config.interceptor.LoginCheckInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

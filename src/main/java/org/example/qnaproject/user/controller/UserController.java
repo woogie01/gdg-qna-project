@@ -4,7 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.qnaproject.config.argumentresolver.Login;
+import org.example.qnaproject.global.config.argumentresolver.Login;
 import org.example.qnaproject.user.dto.LoginRequest;
 import org.example.qnaproject.user.dto.SignupRequest;
 import org.example.qnaproject.user.dto.UserInfo;
