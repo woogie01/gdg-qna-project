@@ -4,8 +4,12 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.qnaproject.answer.domain.Answer;
 import org.example.qnaproject.global.BaseEntity;
 import org.example.qnaproject.user.domain.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -27,6 +31,12 @@ public class Question extends BaseEntity {
     @JoinColumn(name = "author_id")
     private User author; // 작성자
 
+    /**
+     * 답변 리스트 매핑
+     */
+    @OneToMany(mappedBy = "question")
+    private List<Answer> answers = new ArrayList<>();
+
     public Question(String subject, String content, User author) {
         this.subject = subject;
         this.content = content;
@@ -36,5 +46,15 @@ public class Question extends BaseEntity {
     public void update(String subject, String content) {
         this.subject = subject;
         this.content = content;
+    }
+
+    // 답변 추가 연동
+    public void addAnswer(Answer answer) {
+        answers.add(answer);
+    }
+
+    // 답변 삭제 연동
+    public void removeAnswer(Answer answer) {
+        answers.remove(answer);
     }
 }

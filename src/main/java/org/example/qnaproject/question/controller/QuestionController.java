@@ -3,6 +3,7 @@ package org.example.qnaproject.question.controller;
 import lombok.RequiredArgsConstructor;
 import org.example.qnaproject.global.config.argumentresolver.Login;
 import org.example.qnaproject.question.dto.QuestionRequest;
+import org.example.qnaproject.question.dto.QuestionResponse;
 import org.example.qnaproject.question.service.QuestionService;
 import org.example.qnaproject.user.dto.UserInfo;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,11 @@ public class QuestionController {
     private final QuestionService questionService;
 
     // 1. 단일 질문 조회
+    @GetMapping("/{questionId}")
+    public ResponseEntity<QuestionResponse> getQuestion(@PathVariable Long questionId) {
+        QuestionResponse response = questionService.getQuestion(questionId);
+        return ResponseEntity.ok(response);
+    }
 
     // 2. 질문 등록
     @PostMapping
