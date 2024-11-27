@@ -10,10 +10,9 @@ import java.util.List;
 public record AnswerResponse(
         String content,
         String author,
-        Long authorId,
-        LocalDateTime modifiedDate
+        Long authorId
 ) {
-    public static List<AnswerResponse> toResponse(List<Answer> answers) {
+    public static List<AnswerResponse> toResponses(List<Answer> answers) {
         return answers.stream().map(answer -> AnswerResponse.builder()
                         .content(answer.getContent())
                         .authorId(answer.getAuthor().getId())
